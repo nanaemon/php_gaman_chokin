@@ -1,0 +1,3 @@
+サクラサーバーのDB
+DBname:nanaemoon_fridge_app
+Pass:fridge_app123

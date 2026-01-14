@@ -1,0 +1,15 @@
+CREATE TABLE records (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  date DATE NOT NULL COMMENT '我慢した日',
+  item VARCHAR(100) NOT NULL COMMENT '我慢したもの',
+  amount INT UNSIGNED NOT NULL COMMENT '我慢できた金額（円）',
+  category VARCHAR(50) NOT NULL COMMENT 'カテゴリ',
+  memo TEXT COMMENT 'メモ',
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO records (date, item, amount, category, memo)
+VALUES
+(CURDATE(), 'コンビニお菓子', 200, 'コンビニ', '今日は我慢できた');
